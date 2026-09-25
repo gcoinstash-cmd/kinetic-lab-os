@@ -52,7 +52,7 @@ export default function ProofSection() {
                 referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover grayscale brightness-90 contrast-125"
               />
-              <div className="absolute bottom-4 right-4 z-20 bg-emerald-500/90 text-black font-mono text-[10px] font-bold uppercase px-2.5 py-1 rounded border border-emerald-400 shadow-lg select-none">
+              <div className="absolute bottom-4 right-4 z-20 bg-emerald-500/90 text-black font-mono text-xs font-semibold tracking-wider font-bold uppercase px-2.5 py-1 rounded border border-emerald-400 shadow-lg select-none">
                 CALIBRATED // POST-LAB
               </div>
 
@@ -69,7 +69,7 @@ export default function ProofSection() {
                   style={{ width: '100%', minWidth: '100%', height: '100%' }}
                 />
               </div>
-              <div className="absolute bottom-4 left-4 z-20 bg-neutral-950/90 text-zinc-400 font-mono text-[10px] font-bold uppercase px-2.5 py-1 rounded border border-neutral-800 shadow-lg select-none">
+              <div className="absolute bottom-4 left-4 z-20 bg-neutral-950/90 text-zinc-400 font-mono text-xs font-semibold tracking-wider font-bold uppercase px-2.5 py-1 rounded border border-neutral-800 shadow-lg select-none">
                 BASELINE // INTAKE
               </div>
 
@@ -97,7 +97,7 @@ export default function ProofSection() {
             </div>
 
             {/* Slider help prompt */}
-            <div className="flex justify-between items-center text-xs font-mono text-zinc-500 bg-[#101115] border border-neutral-900 p-4 rounded-xl">
+            <div className="flex justify-between items-center text-xs font-mono text-zinc-300 bg-[#101115] border border-neutral-900 p-4 rounded-xl">
               <span className="flex items-center gap-1.5 uppercase">
                 <MessageSquare className="h-4 w-4 text-red-500" />
                 Athlete Squad Context:
@@ -140,7 +140,7 @@ export default function ProofSection() {
                           <Star key={rIdx} className="h-3.5 w-3.5 text-amber-400 fill-amber-400" />
                         ))}
                       </div>
-                      <span className="font-mono text-[10px] text-zinc-500 uppercase">
+                      <span className="font-mono text-xs font-semibold tracking-wider text-zinc-300 uppercase">
                         {review.date}
                       </span>
                     </div>
@@ -149,7 +149,7 @@ export default function ProofSection() {
                       <h4 className="font-display text-sm font-bold text-white uppercase tracking-wide">
                         {review.author}
                       </h4>
-                      <p className="font-mono text-[10px] text-red-400 uppercase flex items-center gap-1">
+                      <p className="font-mono text-xs font-semibold tracking-wider text-red-400 uppercase flex items-center gap-1">
                         <span>{review.vehicle}</span>
                         <span className="text-zinc-600">•</span>
                         <span className="text-zinc-400 font-sans italic">{review.type}</span>

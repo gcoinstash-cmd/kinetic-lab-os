@@ -198,7 +198,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                   ))}
                 </div>
                 
-                <span className="font-mono text-xs text-zinc-500 uppercase tracking-widest hidden sm:inline">
+                <span className="font-mono text-xs text-zinc-300 uppercase tracking-widest hidden sm:inline">
                   Step {step} of 4: {
                     step === 1 ? 'Select Discipline' :
                     step === 2 ? 'Select Protocol' :
@@ -226,7 +226,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       <h3 className="font-display text-lg font-bold uppercase tracking-wider text-white">
                         Select Athletic Discipline
                       </h3>
-                      <p className="text-xs text-zinc-400 font-light">
+                      <p className="text-base text-zinc-200 leading-relaxed font-light">
                         Calibrates sensor sample rates (1000Hz ground reaction forces or high-speed kinematic video).
                       </p>
                     </div>
@@ -250,7 +250,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                               </div>
                               <span className="font-display font-bold text-sm uppercase tracking-wide">{d.label}</span>
                             </div>
-                            <p className="text-[11px] font-sans text-zinc-400 leading-normal">{d.desc}</p>
+                            <p className="text-xs font-semibold font-sans text-zinc-400 leading-normal">{d.desc}</p>
                           </div>
                         );
                       })}
@@ -273,8 +273,8 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                             }}
                             className="p-2.5 rounded-lg border border-neutral-800 bg-neutral-950 text-left text-xs hover:border-red-500/40 transition cursor-pointer"
                           >
-                            <span className="block text-[9px] text-zinc-500 font-mono uppercase">{item.program}</span>
-                            <span className="block font-display text-[11px] text-zinc-200 uppercase font-semibold">{item.focus}</span>
+                            <span className="block text-[9px] text-zinc-300 font-mono uppercase">{item.program}</span>
+                            <span className="block font-display text-xs font-semibold text-zinc-200 uppercase font-semibold">{item.focus}</span>
                           </button>
                         ))}
                       </div>
@@ -283,7 +283,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                     {/* Inputs */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                       <div className="space-y-2">
-                        <label className="block text-xs font-mono uppercase text-zinc-500">
+                        <label className="block text-sm font-semibold font-mono uppercase text-zinc-300">
                           Program / Team *
                         </label>
                         <input
@@ -297,7 +297,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-xs font-mono uppercase text-zinc-500">
+                        <label className="block text-sm font-semibold font-mono uppercase text-zinc-300">
                           Event / Position *
                         </label>
                         <input
@@ -327,7 +327,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       <h3 className="font-display text-lg font-bold uppercase tracking-wider text-white">
                         Configure Testing Protocol
                       </h3>
-                      <p className="text-xs text-zinc-400 font-light">
+                      <p className="text-base text-zinc-200 leading-relaxed font-light">
                         Select laboratory biomechanical protocols. All tests include instant digitized telemetry exports.
                       </p>
                     </div>
@@ -353,13 +353,13 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                                 <span className={`block font-display text-sm font-bold uppercase tracking-wide ${isSelected ? 'text-red-400' : 'text-white'}`}>
                                   {srv.name}
                                 </span>
-                                <span className="block text-[11px] text-zinc-400 line-clamp-1 font-sans">{srv.description}</span>
+                                <span className="block text-xs font-semibold text-zinc-400 line-clamp-1 font-sans">{srv.description}</span>
                               </div>
                             </div>
                             
                             <div className="text-right font-mono text-xs pl-4 shrink-0">
                               <span className="block font-bold text-white">${srv.estimatePrice}</span>
-                              <span className="block text-[10px] text-zinc-500 uppercase">{srv.duration}</span>
+                              <span className="block text-xs font-semibold tracking-wider text-zinc-300 uppercase">{srv.duration}</span>
                             </div>
                           </div>
                         );
@@ -382,14 +382,14 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       <h3 className="font-display text-lg font-bold uppercase tracking-wider text-white">
                         Testing Chamber Timeslot
                       </h3>
-                      <p className="text-xs text-zinc-400 font-light">
+                      <p className="text-base text-zinc-200 leading-relaxed font-light">
                         Select an open assessment window on the runway.
                       </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="block text-xs font-mono uppercase text-zinc-500">
+                        <label className="block text-sm font-semibold font-mono uppercase text-zinc-300">
                           Date *
                         </label>
                         <input
@@ -402,7 +402,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-xs font-mono uppercase text-zinc-500">
+                        <label className="block text-sm font-semibold font-mono uppercase text-zinc-300">
                           Timeslot *
                         </label>
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -443,14 +443,14 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       <h3 className="font-display text-lg font-bold uppercase tracking-wider text-white">
                         Athlete / Coach Information
                       </h3>
-                      <p className="text-xs text-zinc-400 font-light">
+                      <p className="text-base text-zinc-200 leading-relaxed font-light">
                         Where your telemetry dossier and kinematic charts will be delivered.
                       </p>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label className="block text-xs font-mono uppercase text-zinc-500">
+                        <label className="block text-sm font-semibold font-mono uppercase text-zinc-300">
                           Athlete / Coach Name *
                         </label>
                         <input
@@ -464,7 +464,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-xs font-mono uppercase text-zinc-500">
+                        <label className="block text-sm font-semibold font-mono uppercase text-zinc-300">
                           Email Address *
                         </label>
                         <input
@@ -478,7 +478,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       </div>
 
                       <div className="space-y-2 sm:col-span-2">
-                        <label className="block text-xs font-mono uppercase text-zinc-500">
+                        <label className="block text-sm font-semibold font-mono uppercase text-zinc-300">
                           Phone Signal *
                         </label>
                         <input
@@ -492,7 +492,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       </div>
 
                       <div className="space-y-2 sm:col-span-2">
-                        <label className="block text-xs font-mono uppercase text-zinc-500">
+                        <label className="block text-sm font-semibold font-mono uppercase text-zinc-300">
                           Target Goals / Injury Notes (Optional)
                         </label>
                         <textarea
@@ -524,14 +524,14 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       <h3 className="font-display text-2xl font-black uppercase text-white tracking-wide">
                         Assessment Confirmed!
                       </h3>
-                      <p className="text-xs text-zinc-400 leading-relaxed font-light">
+                      <p className="text-base text-zinc-200 leading-relaxed leading-relaxed font-light">
                         Testing session scheduled in the Kinetic Lab runway. Use the ticket code below to monitor your real-time assessment status.
                       </p>
                     </div>
 
                     <div className="max-w-md mx-auto border-2 border-dashed border-neutral-800 rounded-2xl bg-neutral-950 p-6 space-y-6 text-left relative overflow-hidden">
                       <div className="flex items-center justify-between pb-4 border-b border-neutral-900">
-                        <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest">KINETIC LAB // BIOMECHANICS DOSSIER</span>
+                        <span className="text-[9px] font-mono text-zinc-300 uppercase tracking-widest">KINETIC LAB // BIOMECHANICS DOSSIER</span>
                         <span className="inline-flex rounded-full bg-emerald-400/15 px-2.5 py-0.5 text-[9px] font-mono font-bold tracking-wider text-emerald-400 uppercase">
                           Confirmed
                         </span>
@@ -539,32 +539,32 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
 
                       <div className="grid grid-cols-2 gap-4 font-mono text-xs">
                         <div>
-                          <span className="block text-[10px] text-zinc-500 uppercase">Ticket ID</span>
+                          <span className="block text-xs font-semibold tracking-wider text-zinc-300 uppercase">Ticket ID</span>
                           <span className="block font-bold text-red-400 text-sm font-display tracking-wider">
                             {generatedTicket.ticketId}
                           </span>
                         </div>
                         <div>
-                          <span className="block text-[10px] text-zinc-500 uppercase">Athlete</span>
+                          <span className="block text-xs font-semibold tracking-wider text-zinc-300 uppercase">Athlete</span>
                           <span className="block font-semibold text-zinc-200 truncate">{generatedTicket.customerName}</span>
                         </div>
                         <div>
-                          <span className="block text-[10px] text-zinc-500 uppercase">Program</span>
+                          <span className="block text-xs font-semibold tracking-wider text-zinc-300 uppercase">Program</span>
                           <span className="block font-semibold text-zinc-200">{generatedTicket.vehicleMake}</span>
                         </div>
                         <div>
-                          <span className="block text-[10px] text-zinc-500 uppercase">Protocol</span>
+                          <span className="block text-xs font-semibold tracking-wider text-zinc-300 uppercase">Protocol</span>
                           <span className="block font-semibold text-zinc-200 truncate">{selectedService.name}</span>
                         </div>
                         <div className="col-span-2 pt-2 border-t border-neutral-900 flex justify-between items-center bg-neutral-900/40 p-3 rounded-lg border border-neutral-900">
                           <div>
-                            <span className="block text-[10px] text-zinc-500 uppercase">Date &amp; Time</span>
-                            <span className="block text-[11px] font-bold text-white">
+                            <span className="block text-xs font-semibold tracking-wider text-zinc-300 uppercase">Date &amp; Time</span>
+                            <span className="block text-xs font-semibold font-bold text-white">
                               {generatedTicket.selectedDate} @ {generatedTicket.selectedTime}
                             </span>
                           </div>
                           <div className="text-right">
-                            <span className="block text-[10px] text-zinc-400 uppercase">Fee</span>
+                            <span className="block text-xs font-semibold tracking-wider text-zinc-400 uppercase">Fee</span>
                             <span className="block text-sm font-bold text-red-400 font-display">${generatedTicket.priceEstimate}</span>
                           </div>
                         </div>
@@ -573,7 +573,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       <button
                         type="button"
                         onClick={handleCopyTicketId}
-                        className="w-full rounded-lg border border-neutral-800 bg-neutral-900 hover:bg-neutral-800 px-4 py-3 text-center text-xs font-mono font-semibold text-zinc-300 flex items-center justify-center gap-2 transition cursor-pointer"
+                        className="w-full rounded-lg border border-neutral-800 bg-neutral-900 hover:bg-neutral-800 px-4 py-3 text-center text-base font-semibold min-h-[44px] font-mono font-semibold text-zinc-300 flex items-center justify-center gap-2 transition cursor-pointer"
                       >
                         <Copy className="h-4 w-4 text-red-400" />
                         <span>{copied ? 'Copied to Clipboard!' : 'Copy Ticket Code'}</span>
@@ -591,7 +591,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       <button
                         type="button"
                         onClick={handleResetBooking}
-                        className="w-full text-zinc-500 hover:text-white transition py-2 text-xs font-mono uppercase tracking-wider cursor-pointer"
+                        className="w-full text-zinc-300 hover:text-white transition py-2 text-base font-semibold min-h-[44px] font-mono uppercase tracking-wider cursor-pointer"
                       >
                         Book Another Athlete
                       </button>
@@ -651,7 +651,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
           {/* Right Column: Lab Specs */}
           <div className="lg:col-span-4 space-y-6">
             <div className="bg-[#101115] border border-neutral-900 rounded-2xl p-6 space-y-4">
-              <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">[ LAB CERTIFICATION ]</span>
+              <span className="text-xs font-semibold tracking-wider font-mono text-zinc-300 uppercase tracking-widest">[ LAB CERTIFICATION ]</span>
               <h4 className="font-display font-bold text-white text-base uppercase">Hardware &amp; Camera Array</h4>
               
               <ul className="space-y-3 text-xs font-mono text-zinc-400">
@@ -676,7 +676,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
 
             <div className="p-5 rounded-2xl bg-neutral-950 border border-neutral-900 text-xs font-mono text-zinc-400 space-y-2">
               <div className="text-red-400 font-bold uppercase">⚡ Need 1-Click Demo Access?</div>
-              <p className="text-[11px] text-zinc-500">
+              <p className="text-xs font-semibold text-zinc-300">
                 To bypass scheduling and inspect the director's command desk, click <strong>ADMIN PASS</strong> in the top navigation bar. Passkey: <code>kinetic2026</code>.
               </p>
             </div>

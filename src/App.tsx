@@ -157,15 +157,15 @@ export default function App() {
                 <div>
                   <span className="text-white font-extrabold tracking-tight">KINETIC</span>
                   <span className="text-red-500 font-light mx-1">//</span>
-                  <span className="text-zinc-500 font-medium">LAB</span>
+                  <span className="text-zinc-300 font-medium">LAB</span>
                 </div>
               </div>
               
-              <p className="font-sans text-xs text-zinc-400 font-light max-w-sm leading-relaxed">
+              <p className="font-sans text-base text-zinc-200 leading-relaxed font-light max-w-sm leading-relaxed">
                 Olympic-grade sprint testing, 1000Hz dual force plate asymmetry diagnostics, markerless 3D kinematics, and NFL combine acceleration analysis.
               </p>
               
-              <div className="space-y-2 pt-2 text-[11px] font-mono text-zinc-500">
+              <div className="space-y-2 pt-2 text-xs font-semibold font-mono text-zinc-300">
                 <p className="flex items-center space-x-2">
                   <MapPin className="h-4 w-4 text-red-500 shrink-0" />
                   <span>4108 Velocity Boulevard, Manhattan Beach, CA 90266</span>
@@ -184,12 +184,12 @@ export default function App() {
             {/* Quick Links Column */}
             <div className="md:col-span-3 space-y-4">
               <h5 className="font-display text-xs font-bold uppercase tracking-wider text-white">Lab Navigation</h5>
-              <div className="grid grid-cols-2 gap-2 text-[11px] font-mono font-medium">
-                <button onClick={() => handleNavigate('services')} className="text-zinc-500 hover:text-red-400 text-left uppercase transition-colors cursor-pointer">Protocols</button>
-                <button onClick={() => handleNavigate('booking')} className="text-zinc-500 hover:text-red-400 text-left uppercase transition-colors cursor-pointer">Scheduler</button>
-                <button onClick={() => handleNavigate('tracker')} className="text-zinc-500 hover:text-red-400 text-left uppercase transition-colors cursor-pointer">Telemetry</button>
-                <button onClick={() => handleNavigate('pricing')} className="text-zinc-500 hover:text-red-400 text-left uppercase transition-colors cursor-pointer">Packages</button>
-                <button onClick={() => handleNavigate('reviews')} className="text-zinc-500 hover:text-red-400 text-left uppercase transition-colors cursor-pointer">Proof</button>
+              <div className="grid grid-cols-2 gap-2 text-xs font-semibold font-mono font-medium">
+                <button onClick={() => handleNavigate('services')} className="text-zinc-300 hover:text-red-400 text-left uppercase transition-colors cursor-pointer">Protocols</button>
+                <button onClick={() => handleNavigate('booking')} className="text-zinc-300 hover:text-red-400 text-left uppercase transition-colors cursor-pointer">Scheduler</button>
+                <button onClick={() => handleNavigate('tracker')} className="text-zinc-300 hover:text-red-400 text-left uppercase transition-colors cursor-pointer">Telemetry</button>
+                <button onClick={() => handleNavigate('pricing')} className="text-zinc-300 hover:text-red-400 text-left uppercase transition-colors cursor-pointer">Packages</button>
+                <button onClick={() => handleNavigate('reviews')} className="text-zinc-300 hover:text-red-400 text-left uppercase transition-colors cursor-pointer">Proof</button>
                 <button onClick={() => setIsAdminPassModalOpen(true)} className="text-red-400 font-bold text-left uppercase transition-colors cursor-pointer">Admin Gate</button>
               </div>
             </div>
@@ -197,7 +197,7 @@ export default function App() {
             {/* Operations telemetry */}
             <div className="md:col-span-4 space-y-4">
               <h5 className="font-display text-xs font-bold uppercase tracking-wider text-white">Testing Operations</h5>
-              <div className="space-y-3 font-mono text-[11px] text-zinc-500 leading-normal">
+              <div className="space-y-3 font-mono text-xs font-semibold text-zinc-300 leading-normal">
                 <div className="flex justify-between border-b border-neutral-900 pb-1.5">
                   <span>MONDAY - FRIDAY</span>
                   <span className="text-zinc-300">07:00 AM - 07:00 PM</span>
@@ -215,7 +215,7 @@ export default function App() {
           </div>
 
           {/* Bottom attribution copyright row */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] font-mono text-zinc-600 border-t border-neutral-900 pt-6">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold tracking-wider font-mono text-zinc-600 border-t border-neutral-900 pt-6">
             <div className="flex items-center space-x-1.5">
               <span>© {new Date().getFullYear()} KINETIC LAB OS. All biometric rights reserved.</span>
               <span className="hidden sm:inline">|</span>
@@ -225,11 +225,11 @@ export default function App() {
               </span>
             </div>
 
-            <div className="flex items-center gap-1.5 select-none text-[10px]">
+            <div className="flex items-center gap-1.5 select-none text-xs font-semibold tracking-wider">
               <span>Assembled for</span>
               <Heart className="h-3 w-3 text-red-500 fill-red-500" />
               <span>Aura &amp; Grid Ghost Factory™</span>
-              <ExternalLink className="h-3 w-3 text-zinc-500" />
+              <ExternalLink className="h-3 w-3 text-zinc-300" />
             </div>
           </div>
         </div>
@@ -252,7 +252,7 @@ export default function App() {
                 <h3 className="font-display font-extrabold uppercase text-lg text-white tracking-wide">
                   Lab Director Command Room
                 </h3>
-                <p className="text-xs text-zinc-400 font-sans font-light">
+                <p className="text-base text-zinc-200 leading-relaxed font-sans font-light">
                   Inspect the live athlete roster, 1000Hz force sensor feeds, and milestone billing.
                 </p>
               </div>
@@ -260,7 +260,7 @@ export default function App() {
               {/* Cheat Code Banner */}
               <div className="p-3.5 bg-neutral-950 border border-neutral-800 rounded-xl flex items-center justify-between">
                 <div className="space-y-0.5 text-left">
-                  <span className="block text-[10px] font-mono uppercase tracking-wider text-red-400 font-bold">
+                  <span className="block text-xs font-semibold tracking-wider font-mono uppercase tracking-wider text-red-400 font-bold">
                     1-CLICK CHEAT CODE (BUYER PREVIEW)
                   </span>
                   <span className="text-xs font-mono font-bold text-white tracking-wider">
@@ -281,7 +281,7 @@ export default function App() {
 
               <form onSubmit={handleAdminUnlock} className="space-y-4">
                 <div>
-                  <label className="block text-[11px] font-mono uppercase tracking-wider text-zinc-400 mb-1">
+                  <label className="block text-sm font-semibold font-mono uppercase tracking-wider text-zinc-400 mb-1">
                     Director Passkey
                   </label>
                   <input
@@ -304,7 +304,7 @@ export default function App() {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 py-2.5 bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase tracking-wider font-mono rounded-lg transition shadow cursor-pointer active:scale-95"
+                    className="flex-1 py-2.5 bg-red-600 hover:bg-red-500 text-white font-bold text-base font-semibold min-h-[44px] uppercase tracking-wider font-mono rounded-lg transition shadow cursor-pointer active:scale-95"
                   >
                     Enter Command Desk
                   </button>

@@ -72,7 +72,7 @@ export default function PricingMatrix({ onSelectPackageService, packages }: Pric
                 {/* Card Top Area */}
                 <div className="space-y-6">
                   <div className="space-y-2">
-                    <span className="font-mono text-xs text-zinc-500 uppercase tracking-widest block">
+                    <span className="font-mono text-xs text-zinc-300 uppercase tracking-widest block">
                       TIER 0{idx + 1}
                     </span>
                     <h3 className="font-display text-xl font-bold uppercase text-white">
@@ -86,12 +86,12 @@ export default function PricingMatrix({ onSelectPackageService, packages }: Pric
                   {/* Price */}
                   <div className="flex items-baseline font-display">
                     <span className="text-4xl sm:text-5xl font-black text-white">{tier.price}</span>
-                    <span className="text-xs text-zinc-500 font-mono uppercase ml-2 tracking-widest">/ testing session</span>
+                    <span className="text-xs text-zinc-300 font-mono uppercase ml-2 tracking-widest">/ testing session</span>
                   </div>
 
                   {/* Feature inclusions */}
                   <div className="space-y-3.5 pt-6 border-t border-neutral-900/80">
-                    <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest block">
+                    <span className="text-xs font-semibold tracking-wider font-mono text-zinc-300 uppercase tracking-widest block">
                       Protocol Specifications:
                     </span>
                     <ul className="space-y-2.5 text-xs text-zinc-300 font-sans">
@@ -117,7 +117,7 @@ export default function PricingMatrix({ onSelectPackageService, packages }: Pric
                   >
                     Select {tier.name}
                   </button>
-                  <p className="text-[11px] font-mono text-zinc-600 text-center mt-3">
+                  <p className="text-xs font-semibold font-mono text-zinc-600 text-center mt-3">
                     ⚡ Instant digital report dossier generated.
                   </p>
                 </div>
@@ -134,7 +134,7 @@ export default function PricingMatrix({ onSelectPackageService, packages }: Pric
               <ShieldCheck className="h-5 w-5 text-red-500" />
               Need Full Athletic Department or Combine Squad Retainers?
             </h4>
-            <p className="text-xs text-zinc-400 font-light leading-relaxed">
+            <p className="text-base text-zinc-200 leading-relaxed font-light leading-relaxed">
               We provide team-wide force plate deployments, dedicated high-speed laser sprint camps, and automated API database hooks into your coaching management platform.
             </p>
           </div>

@@ -44,7 +44,7 @@ export default function Navbar({ onNavigate, activeSection, onOpenAdminPass }: N
           <div className="flex items-center space-x-1.5 font-display">
             <span className="text-white uppercase font-extrabold tracking-tight">KINETIC</span>
             <span className="text-red-500 font-light">//</span>
-            <span className="text-zinc-500 font-medium uppercase">LAB</span>
+            <span className="text-zinc-300 font-medium uppercase">LAB</span>
           </div>
         </div>
 
@@ -54,7 +54,7 @@ export default function Navbar({ onNavigate, activeSection, onOpenAdminPass }: N
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
           </span>
-          <span className="text-zinc-500">FORCE SENSORS:</span>
+          <span className="text-zinc-300">FORCE SENSORS:</span>
           <span className="text-emerald-400 font-semibold tracking-wide uppercase">1000HZ DUAL PLATES ONLINE</span>
         </div>
 
@@ -81,7 +81,7 @@ export default function Navbar({ onNavigate, activeSection, onOpenAdminPass }: N
           
           <button
             onClick={onOpenAdminPass}
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg border border-red-500/40 bg-red-600/10 hover:bg-red-600/20 text-red-400 font-mono text-xs font-bold transition-all cursor-pointer"
+            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg border border-red-500/40 bg-red-600/10 hover:bg-red-600/20 text-red-400 font-mono text-base font-semibold min-h-[44px] font-bold transition-all cursor-pointer"
           >
             <span>⚡ ADMIN PASS</span>
           </button>
@@ -99,7 +99,7 @@ export default function Navbar({ onNavigate, activeSection, onOpenAdminPass }: N
         <div className="flex md:hidden items-center space-x-3">
           <button
             onClick={onOpenAdminPass}
-            className="px-2.5 py-1 rounded bg-red-600/10 border border-red-500/30 text-red-400 font-mono text-[10px] font-bold"
+            className="px-2.5 py-1 rounded bg-red-600/10 border border-red-500/30 text-red-400 font-mono text-base font-semibold min-h-[44px] font-semibold tracking-wider font-bold"
           >
             ⚡ ADMIN
           </button>

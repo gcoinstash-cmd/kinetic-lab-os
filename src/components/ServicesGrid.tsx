@@ -49,7 +49,7 @@ export default function ServicesGrid({ onSelectService, services }: ServicesGrid
             <div className="flex items-center gap-3 text-xs font-mono text-red-500 uppercase tracking-widest">
               <span>[ BIOMECHANICS RADAR ]</span>
               <span className="text-zinc-700">//</span>
-              <span className="text-zinc-500">1000HZ TELEMETRY SCAN</span>
+              <span className="text-zinc-300">1000HZ TELEMETRY SCAN</span>
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
               Athletic Assessment Protocols
@@ -99,7 +99,7 @@ export default function ServicesGrid({ onSelectService, services }: ServicesGrid
                     <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900/80 text-red-500 group-hover:bg-red-600 group-hover:text-white transition-all duration-300 shadow-md">
                       {renderIcon(service.icon)}
                     </div>
-                    <span className="font-mono text-[10px] text-zinc-500 bg-neutral-900 px-2.5 py-1 rounded-md border border-neutral-900 uppercase">
+                    <span className="font-mono text-xs font-semibold tracking-wider text-zinc-300 bg-neutral-900 px-2.5 py-1 rounded-md border border-neutral-900 uppercase">
                       {service.category.replace('_', ' ')}
                     </span>
                   </div>
@@ -112,7 +112,7 @@ export default function ServicesGrid({ onSelectService, services }: ServicesGrid
                       {service.description}
                     </p>
                     {service.helperText && (
-                      <span className="text-xs text-zinc-500 mt-1 block font-sans leading-relaxed italic">
+                      <span className="text-xs text-zinc-300 mt-1 block font-sans leading-relaxed italic">
                         {service.helperText}
                       </span>
                     )}
@@ -122,12 +122,12 @@ export default function ServicesGrid({ onSelectService, services }: ServicesGrid
                 {/* Technical meta metrics */}
                 <div className="pt-6 mt-6 border-t border-neutral-900/60 flex items-center justify-between relative z-10 font-mono">
                   <div className="flex flex-col">
-                    <span className="text-[10px] text-zinc-500 uppercase">Assessment Fee</span>
+                    <span className="text-xs font-semibold tracking-wider text-zinc-300 uppercase">Assessment Fee</span>
                     <span className="text-sm font-bold text-white font-display">${service.estimatePrice}</span>
                   </div>
 
                   <div className="flex flex-col items-center">
-                    <span className="text-[10px] text-zinc-500 uppercase">Testing Window</span>
+                    <span className="text-xs font-semibold tracking-wider text-zinc-300 uppercase">Testing Window</span>
                     <span className="text-xs text-zinc-400 flex items-center gap-1">
                       <Clock className="h-3 w-3 text-red-500" />
                       {service.duration}
@@ -149,7 +149,7 @@ export default function ServicesGrid({ onSelectService, services }: ServicesGrid
 
         {/* Info callout footer */}
         <div className="mt-12 text-center">
-          <p className="inline-flex flex-col sm:flex-row sm:items-center justify-center gap-2 rounded-full border border-neutral-900 bg-neutral-950 px-6 py-2.5 text-xs text-zinc-400 font-mono">
+          <p className="inline-flex flex-col sm:flex-row sm:items-center justify-center gap-2 rounded-full border border-neutral-900 bg-neutral-950 px-6 py-2.5 text-base text-zinc-200 leading-relaxed font-mono">
             <span>⚡ Custom pro team combine setups &amp; multi-athlete rosters supported.</span>
             <button 
               onClick={() => onSelectService('markerless-3d')}

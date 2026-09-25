@@ -134,7 +134,7 @@ export default function ServiceTracker({ bookings, onUpdateStatus }: ServiceTrac
             </div>
             <button
               type="submit"
-              className="bg-red-600 hover:bg-red-500 text-white font-display font-bold text-xs uppercase tracking-wider px-6 rounded-lg transition-all flex items-center gap-2 cursor-pointer shadow-lg shadow-red-600/20"
+              className="bg-red-600 hover:bg-red-500 text-white font-display font-bold text-base font-semibold min-h-[44px] uppercase tracking-wider px-6 rounded-lg transition-all flex items-center gap-2 cursor-pointer shadow-lg shadow-red-600/20"
             >
               <span>Sync</span>
             </button>
@@ -151,7 +151,7 @@ export default function ServiceTracker({ bookings, onUpdateStatus }: ServiceTrac
             </motion.p>
           )}
 
-          <div className="mt-4 flex justify-center gap-4 text-[10px] font-mono text-zinc-500">
+          <div className="mt-4 flex justify-center gap-4 text-xs font-semibold tracking-wider font-mono text-zinc-300">
             <span>PRELOADED LAB CODES:</span>
             <button onClick={() => { setSearchId('KNT-9502'); setTimeout(() => handleSearch(), 50); }} className="text-red-400 border-b border-dashed border-red-500/40 hover:text-white transition-colors cursor-pointer">KNT-9502 (In Progress)</button>
             <button onClick={() => { setSearchId('KNT-4108'); setTimeout(() => handleSearch(), 50); }} className="text-red-400 border-b border-dashed border-red-500/40 hover:text-white transition-colors cursor-pointer">KNT-4108 (Baseline)</button>
@@ -175,11 +175,11 @@ export default function ServiceTracker({ bookings, onUpdateStatus }: ServiceTrac
                 {/* Header */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-neutral-900">
                   <div className="space-y-1">
-                    <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">[ ATHLETE TELEMETRY LOG ]</span>
+                    <span className="text-xs font-semibold tracking-wider font-mono text-zinc-300 uppercase tracking-widest">[ ATHLETE TELEMETRY LOG ]</span>
                     <h3 className="font-display text-xl font-bold uppercase text-white">
                       {activeTicket.vehicleMake} // {activeTicket.vehicleModel}
                     </h3>
-                    <p className="text-xs text-zinc-400 font-mono flex items-center gap-1.5 uppercase">
+                    <p className="text-base text-zinc-200 leading-relaxed font-mono flex items-center gap-1.5 uppercase">
                       <span>Ticket: {activeTicket.ticketId}</span>
                       <span className="text-zinc-600">•</span>
                       <span>Athlete: {activeTicket.customerName}</span>
@@ -187,7 +187,7 @@ export default function ServiceTracker({ bookings, onUpdateStatus }: ServiceTrac
                   </div>
 
                   <div className="text-left sm:text-right">
-                    <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest block">CURRENT PHASE</span>
+                    <span className="text-xs font-semibold tracking-wider font-mono text-zinc-300 uppercase tracking-widest block">CURRENT PHASE</span>
                     <span className="inline-flex rounded-full bg-red-600/15 border border-red-500/30 px-3 py-1 text-xs font-mono font-bold tracking-wide text-red-400 uppercase mt-1">
                       {STATUS_PIPELINE[currentStep].label}
                     </span>
@@ -221,12 +221,12 @@ export default function ServiceTracker({ bookings, onUpdateStatus }: ServiceTrac
                           </div>
 
                           <div className="space-y-0.5 max-w-[120px] sm:max-w-none">
-                            <span className={`block font-display text-[11px] font-bold uppercase tracking-wider ${
-                              isActive ? 'text-red-400' : isCompleted ? 'text-zinc-200' : 'text-zinc-500'
+                            <span className={`block font-display text-xs font-semibold font-bold uppercase tracking-wider ${
+                              isActive ? 'text-red-400' : isCompleted ? 'text-zinc-200' : 'text-zinc-300'
                             }`}>
                               {stage.label}
                             </span>
-                            <span className="block text-[9px] font-sans text-zinc-500 leading-normal hidden md:block">
+                            <span className="block text-[9px] font-sans text-zinc-300 leading-normal hidden md:block">
                               {stage.desc}
                             </span>
                           </div>
@@ -238,7 +238,7 @@ export default function ServiceTracker({ bookings, onUpdateStatus }: ServiceTrac
 
                 {/* Simulation Control Row */}
                 <div className="pt-6 border-t border-neutral-900 flex flex-wrap items-center justify-between gap-4">
-                  <div className="text-[11px] font-mono text-zinc-500">
+                  <div className="text-xs font-semibold font-mono text-zinc-300">
                     <span>STATUS CONTROL (DEMO SIMULATOR):</span>
                   </div>
 
@@ -246,14 +246,14 @@ export default function ServiceTracker({ bookings, onUpdateStatus }: ServiceTrac
                     <button
                       onClick={handleRegressionStatus}
                       disabled={currentStep === 0 || isSimulating}
-                      className="px-3 py-1.5 rounded bg-neutral-900 hover:bg-neutral-800 text-zinc-400 text-xs font-mono uppercase disabled:opacity-40 cursor-pointer"
+                      className="px-3 py-1.5 rounded bg-neutral-900 hover:bg-neutral-800 text-zinc-400 text-base font-semibold min-h-[44px] font-mono uppercase disabled:opacity-40 cursor-pointer"
                     >
                       &lt; Prior Stage
                     </button>
                     <button
                       onClick={handleAdvanceStatus}
                       disabled={currentStep === STATUS_PIPELINE.length - 1 || isSimulating}
-                      className="px-3 py-1.5 rounded bg-red-600 hover:bg-red-500 text-white text-xs font-mono font-bold uppercase disabled:opacity-40 cursor-pointer shadow-md shadow-red-600/20"
+                      className="px-3 py-1.5 rounded bg-red-600 hover:bg-red-500 text-white text-base font-semibold min-h-[44px] font-mono font-bold uppercase disabled:opacity-40 cursor-pointer shadow-md shadow-red-600/20"
                     >
                       Next Stage &gt;
                     </button>
@@ -265,7 +265,7 @@ export default function ServiceTracker({ bookings, onUpdateStatus }: ServiceTrac
               {/* Right Column: Lab Station & Biomechanist Details (4 cols) */}
               <div className="lg:col-span-4 bg-[#101115] rounded-2xl border border-neutral-900 p-6 sm:p-8 space-y-6 flex flex-col justify-between">
                 <div className="space-y-4">
-                  <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">[ LAB SPECIFICATIONS ]</span>
+                  <span className="text-xs font-semibold tracking-wider font-mono text-zinc-300 uppercase tracking-widest">[ LAB SPECIFICATIONS ]</span>
                   
                   {specialist && (
                     <div className="space-y-4 pt-2">
@@ -275,7 +275,7 @@ export default function ServiceTracker({ bookings, onUpdateStatus }: ServiceTrac
                           <span className="font-mono text-xs uppercase font-bold">Assigned Specialist</span>
                         </div>
                         <div className="font-display font-bold text-white text-sm">{specialist.name}</div>
-                        <div className="text-[11px] font-mono text-zinc-400">{specialist.role}</div>
+                        <div className="text-xs font-semibold font-mono text-zinc-400">{specialist.role}</div>
                       </div>
 
                       <div className="p-4 rounded-xl bg-neutral-950 border border-neutral-900 space-y-2">
@@ -290,21 +290,21 @@ export default function ServiceTracker({ bookings, onUpdateStatus }: ServiceTrac
 
                   <div className="space-y-2 pt-2 text-xs font-mono text-zinc-400">
                     <div className="flex justify-between py-1 border-b border-neutral-900">
-                      <span className="text-zinc-500">Scheduled Date:</span>
+                      <span className="text-zinc-300">Scheduled Date:</span>
                       <span className="text-white">{activeTicket.selectedDate}</span>
                     </div>
                     <div className="flex justify-between py-1 border-b border-neutral-900">
-                      <span className="text-zinc-500">Time Slot:</span>
+                      <span className="text-zinc-300">Time Slot:</span>
                       <span className="text-white">{activeTicket.selectedTime}</span>
                     </div>
                     <div className="flex justify-between py-1">
-                      <span className="text-zinc-500">Assessment Fee:</span>
+                      <span className="text-zinc-300">Assessment Fee:</span>
                       <span className="text-emerald-400 font-bold">${activeTicket.priceEstimate}</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-4 rounded-xl bg-red-600/10 border border-red-500/20 text-[11px] font-mono text-red-400 leading-relaxed">
+                <div className="p-4 rounded-xl bg-red-600/10 border border-red-500/20 text-xs font-semibold font-mono text-red-400 leading-relaxed">
                   ✓ Certified 1000Hz sensor calibration active. Telemetry data encrypted and routed to player profile vault.
                 </div>
               </div>

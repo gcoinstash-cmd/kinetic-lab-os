@@ -32,7 +32,7 @@ export default function Hero({ onNavigate, baysAvailable }: HeroProps) {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center space-x-2 rounded-full border border-red-500/25 bg-red-600/10 px-3 py-1 text-[11px] font-mono tracking-wider text-red-400 uppercase"
+              className="inline-flex items-center space-x-2 rounded-full border border-red-500/25 bg-red-600/10 px-3 py-1 text-xs font-semibold font-mono tracking-wider text-red-400 uppercase"
             >
               <span className="h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>
               <span>High-Performance Biomechanics &amp; Sprint Testing OS</span>
@@ -106,7 +106,7 @@ export default function Hero({ onNavigate, baysAvailable }: HeroProps) {
                   <span className="text-2xl font-bold font-display">{baysAvailable}</span>
                   <span className="text-zinc-600 text-sm ml-0.5">/4</span>
                 </div>
-                <p className="text-[10px] uppercase text-zinc-500 tracking-wider">Testing Lanes Open</p>
+                <p className="text-xs font-semibold tracking-wider uppercase text-zinc-300 tracking-wider">Testing Lanes Open</p>
               </div>
 
               <div className="space-y-1">
@@ -114,7 +114,7 @@ export default function Hero({ onNavigate, baysAvailable }: HeroProps) {
                   <span className="text-2xl font-bold font-display">27.4</span>
                   <span className="text-red-500 text-sm ml-0.5">MPH</span>
                 </div>
-                <p className="text-[10px] uppercase text-zinc-500 tracking-wider">Peak Velocity Verified</p>
+                <p className="text-xs font-semibold tracking-wider uppercase text-zinc-300 tracking-wider">Peak Velocity Verified</p>
               </div>
 
               <div className="space-y-1">
@@ -122,7 +122,7 @@ export default function Hero({ onNavigate, baysAvailable }: HeroProps) {
                   <span className="text-2xl font-bold font-display">1000</span>
                   <span className="text-zinc-600 text-sm ml-0.5">Hz</span>
                 </div>
-                <p className="text-[10px] uppercase text-zinc-500 tracking-wider">Force Sensor Rate</p>
+                <p className="text-xs font-semibold tracking-wider uppercase text-zinc-300 tracking-wider">Force Sensor Rate</p>
               </div>
             </motion.div>
           </div>
@@ -149,7 +149,7 @@ export default function Hero({ onNavigate, baysAvailable }: HeroProps) {
                 
                 {/* Telemetry floating badge */}
                 <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl border border-white/10 bg-black/80 backdrop-blur-md space-y-2">
-                  <div className="flex items-center justify-between text-[10px] font-mono text-zinc-400 uppercase">
+                  <div className="flex items-center justify-between text-xs font-semibold tracking-wider font-mono text-zinc-400 uppercase">
                     <span>1000HZ TELEMETRY //</span>
                     <span className="text-red-400 font-bold animate-pulse">Live Optojump Feed</span>
                   </div>
@@ -173,7 +173,7 @@ export default function Hero({ onNavigate, baysAvailable }: HeroProps) {
         <div className="absolute top-0 bottom-0 left-0 w-16 bg-gradient-to-r from-[#0A0A0B] to-transparent z-10 pointer-events-none" />
         <div className="absolute top-0 bottom-0 right-0 w-16 bg-gradient-to-l from-[#0A0A0B] to-transparent z-10 pointer-events-none" />
         
-        <div className="animate-marquee whitespace-nowrap flex select-none text-xs font-mono font-bold tracking-widest text-zinc-500">
+        <div className="animate-marquee whitespace-nowrap flex select-none text-xs font-mono font-bold tracking-widest text-zinc-300">
           {brands.map((brand, i) => (
             <span key={i} className="mx-8 uppercase hover:text-red-400 transition-colors">
               {brand}

@@ -162,11 +162,11 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
               <div className="flex items-center space-x-2">
                 <span className="font-display font-extrabold uppercase tracking-wider text-sm text-white">KINETIC LAB</span>
                 <span className="text-zinc-600 text-xs">//</span>
-                <span className="text-[11px] font-mono text-red-400 bg-red-500/10 px-2 py-0.5 rounded border border-red-500/20">
+                <span className="text-xs font-semibold font-mono text-red-400 bg-red-500/10 px-2 py-0.5 rounded border border-red-500/20">
                   BIOMECHANICS COMMAND OS
                 </span>
               </div>
-              <p className="text-[10px] font-mono text-zinc-500">
+              <p className="text-xs font-semibold tracking-wider font-mono text-zinc-300">
                 Authorized Lab Director Session (Passkey Verified)
               </p>
             </div>
@@ -179,7 +179,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
             </div>
             <button 
               onClick={onExit}
-              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg border border-neutral-800 bg-neutral-900/60 hover:bg-neutral-800 text-xs font-mono text-zinc-300 hover:text-white transition cursor-pointer"
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg border border-neutral-800 bg-neutral-900/60 hover:bg-neutral-800 text-base font-semibold min-h-[44px] font-mono text-zinc-300 hover:text-white transition cursor-pointer"
             >
               <LogOut className="h-3.5 w-3.5" />
               <span>Exit Admin</span>
@@ -194,7 +194,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
         {/* KPI Telemetry Strip */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="bg-neutral-950 border border-neutral-900 rounded-xl p-5 relative overflow-hidden">
-            <div className="flex items-center justify-between text-zinc-500 text-xs font-mono uppercase">
+            <div className="flex items-center justify-between text-zinc-300 text-xs font-mono uppercase">
               <span>Active Roster</span>
               <Users className="h-4 w-4 text-red-500" />
             </div>
@@ -206,18 +206,18 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
           </div>
 
           <div className="bg-neutral-950 border border-neutral-900 rounded-xl p-5 relative overflow-hidden">
-            <div className="flex items-center justify-between text-zinc-500 text-xs font-mono uppercase">
+            <div className="flex items-center justify-between text-zinc-300 text-xs font-mono uppercase">
               <span>Peak Velocity Verified</span>
               <Gauge className="h-4 w-4 text-red-500" />
             </div>
-            <div className="text-3xl font-display font-extrabold text-white mt-2">27.4 <span className="text-base text-zinc-500">MPH</span></div>
+            <div className="text-3xl font-display font-extrabold text-white mt-2">27.4 <span className="text-base text-zinc-300">MPH</span></div>
             <div className="text-xs font-mono text-zinc-400 mt-1">
               <span>Laser Gate #4 • C. Coleman</span>
             </div>
           </div>
 
           <div className="bg-neutral-950 border border-neutral-900 rounded-xl p-5 relative overflow-hidden">
-            <div className="flex items-center justify-between text-zinc-500 text-xs font-mono uppercase">
+            <div className="flex items-center justify-between text-zinc-300 text-xs font-mono uppercase">
               <span>Testing Sessions (MTD)</span>
               <Activity className="h-4 w-4 text-red-500" />
             </div>
@@ -228,7 +228,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
           </div>
 
           <div className="bg-neutral-950 border border-neutral-900 rounded-xl p-5 relative overflow-hidden">
-            <div className="flex items-center justify-between text-zinc-500 text-xs font-mono uppercase">
+            <div className="flex items-center justify-between text-zinc-300 text-xs font-mono uppercase">
               <span>Escrow & Lab Billing</span>
               <DollarSign className="h-4 w-4 text-red-500" />
             </div>
@@ -267,7 +267,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
           {activeTab === 'roster' && (
             <div className="flex items-center space-x-2">
               <div className="relative">
-                <Search className="h-3.5 w-3.5 text-zinc-500 absolute left-3 top-2.5" />
+                <Search className="h-3.5 w-3.5 text-zinc-300 absolute left-3 top-2.5" />
                 <input
                   type="text"
                   placeholder="Filter athlete, team, or sport..."
@@ -297,7 +297,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
           <div className="bg-neutral-950 border border-neutral-900 rounded-xl overflow-hidden shadow-2xl">
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs font-mono">
-                <thead className="bg-[#101115] text-zinc-500 uppercase border-b border-neutral-900">
+                <thead className="bg-[#101115] text-zinc-300 uppercase border-b border-neutral-900">
                   <tr>
                     <th className="px-5 py-3.5">Athlete / Discipline</th>
                     <th className="px-5 py-3.5">Team / Program</th>
@@ -313,17 +313,17 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
                     <tr key={athlete.id} className="hover:bg-neutral-900/40 transition">
                       <td className="px-5 py-4">
                         <div className="font-bold text-white text-sm">{athlete.name}</div>
-                        <div className="text-[11px] text-zinc-500">{athlete.discipline}</div>
+                        <div className="text-xs font-semibold text-zinc-300">{athlete.discipline}</div>
                       </td>
                       <td className="px-5 py-4 text-zinc-400 font-medium">{athlete.team}</td>
                       <td className="px-5 py-4">
                         <span className="font-bold text-red-400 text-sm">{athlete.topSpeedMph}</span>
-                        <span className="text-[10px] text-zinc-500 ml-1">MPH</span>
+                        <span className="text-xs font-semibold tracking-wider text-zinc-300 ml-1">MPH</span>
                       </td>
                       <td className="px-5 py-4 font-bold text-white">{athlete.tenYardSplit}</td>
                       <td className="px-5 py-4 text-amber-400 font-bold">{athlete.reactiveStrengthIndex}</td>
                       <td className="px-5 py-4">
-                        <span className={`inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold uppercase ${
+                        <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold tracking-wider font-bold uppercase ${
                           athlete.status === 'PR Verified'
                             ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'
                             : athlete.status === 'Active Cycle'
@@ -349,7 +349,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
           <div className="bg-neutral-950 border border-neutral-900 rounded-xl overflow-hidden shadow-2xl">
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs font-mono">
-                <thead className="bg-[#101115] text-zinc-500 uppercase border-b border-neutral-900">
+                <thead className="bg-[#101115] text-zinc-300 uppercase border-b border-neutral-900">
                   <tr>
                     <th className="px-5 py-3.5">Ticket ID</th>
                     <th className="px-5 py-3.5">Athlete</th>
@@ -367,7 +367,7 @@ export default function AdminDashboard({ onExit }: AdminDashboardProps) {
                       <td className="px-5 py-4 text-zinc-300">{b.protocol}</td>
                       <td className="px-5 py-4 text-zinc-400">{b.date} • {b.timeSlot}</td>
                       <td className="px-5 py-4">
-                        <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-neutral-900 text-zinc-300 border border-neutral-800">
+                        <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold tracking-wider font-bold uppercase bg-neutral-900 text-zinc-300 border border-neutral-800">
                           {b.status}
                         </span>
                       </td>
